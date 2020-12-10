@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.example.demo.common">
+    <select id="selectTest" parameterType="int" resultType="String" >
+  		select 1 + 1 + #{number}
+    </select>
+    <insert id ="create">
+		INSERT INTO tbl_weather_log(
+			android_id,
+		    location
+		) VALUES (
+			#{androidId},
+		    #{location}
+		)
+	</insert>
+</mapper>
